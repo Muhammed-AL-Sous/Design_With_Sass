@@ -1,0 +1,21 @@
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  padding-right: 0;
+  list-style: none;
+}
+
+.mobile-center {
+  @include breakpoints(mobile) {
+    text-align: center;
+  }
+}
+
+/* ============================================================================== */

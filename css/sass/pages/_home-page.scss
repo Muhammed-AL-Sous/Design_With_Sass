@@ -1,0 +1,484 @@
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+// Import Variables File
+@use "../helpers/variables" as *;
+
+/* Start Landing Section */
+
+.landing {
+  overflow: hidden;
+  background-image: url("../images/landing.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  max-width: 100%;
+  min-height: 600px;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    @include overlay(black, 0.5, 2);
+  }
+  > div {
+    position: absolute;
+    z-index: 2;
+    color: $white-color;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    font : {
+      size: 40px;
+      family: "Lato", serif;
+      weight: 700;
+    }
+    text-align: center;
+    line-height: 1.8;
+  }
+}
+
+/* End Landing Section */
+
+/* ============================================================================== */
+
+/* Start Features Section */
+
+.features {
+  overflow: hidden;
+  @extend %padding-top-bottom-50;
+  h2 {
+    @extend %main-title;
+  }
+  .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    .box {
+      text-align: center;
+      i {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background-color: $secondary-color;
+        line-height: 60px;
+        color: $white-color;
+      }
+      h3 {
+        margin: {
+          top: 10px;
+          bottom: 10px;
+        }
+        color: $main-color;
+      }
+      p {
+        margin: 0;
+        line-height: 1.9;
+        font: {
+          size: 15px;
+          weight: 600;
+        }
+        color: #777;
+      }
+    }
+  }
+}
+
+/* End Features Section */
+
+/* ============================================================================== */
+
+/* Start OverView Section */
+
+.overview {
+  overflow: hidden;
+  @extend %padding-top-bottom-50;
+  background-color: #f0f5f7;
+  h2 {
+    @extend %main-title;
+  }
+  p {
+    @extend %description;
+  }
+  span {
+    display: block;
+    color: #555;
+    text-align: center;
+    font: {
+      size: 25px;
+      weight: 500;
+      family: "Lato", serif;
+    }
+  }
+}
+
+/* End OverView Section */
+
+/* ============================================================================== */
+
+/* Start Featured Work */
+
+.work {
+  @extend %padding-top-bottom-50;
+  h2 {
+    @extend %main-title;
+  }
+  p {
+    @extend %description;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    li {
+      font: {
+        size: 15px;
+        weight: 500;
+      }
+      border: 2px solid $main-color;
+      color: $main-color;
+      padding: 10px;
+      cursor: pointer;
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      @include transition(0.3s);
+      &.active,
+      &:hover {
+        background-color: $secondary-color;
+        color: $white-color;
+        border-color: $secondary-color;
+      }
+    }
+  }
+  .images {
+    text-align: center;
+    img {
+      width: 250px;
+      height: 150px;
+      margin: 5px;
+      object-fit: cover;
+      @include breakpoints(mobile) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+/* End Featured Work */
+
+/* ============================================================================== */
+
+/* Start Latest Posts Section */
+
+.latest-posts {
+  overflow: hidden;
+  background-color: #f0f5f7;
+  @extend %padding-top-bottom-50;
+  h2 {
+    @extend %main-title;
+  }
+  .description {
+    @extend %description;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+
+    .card {
+      background-color: $white-color;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+
+      h3 {
+        padding: 10px;
+        color: $main-color;
+        font: {
+          size: 18px;
+        }
+        margin: {
+          top: 10px;
+          bottom: 15px;
+          right: 0;
+          left: 0;
+        }
+      }
+
+      span {
+        font: {
+          family: "Lato", serif;
+          size: 16px;
+          weight: 600;
+        }
+        color: #666;
+        display: block;
+        padding: 10px;
+        margin: 0;
+      }
+
+      p {
+        padding: 10px;
+        font: {
+          family: "Lato", serif;
+          weight: 600;
+          size: 15px;
+        }
+        line-height: 1.8;
+        color: #444;
+        margin: {
+          top: 10px;
+          bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+/* End Latest Posts Section */
+
+/* ============================================================================== */
+
+/* Start Pricing Table Section */
+
+.pricing-table {
+  @extend %padding-top-bottom-50;
+  position: relative;
+  background-image: url("../images/pricing.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  &::before {
+    content: "";
+    @include overlay(black, 0.6, 1);
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  h2 {
+    @extend %main-title;
+    color: $white-color !important;
+  }
+  p {
+    @extend %description;
+    color: #999 !important;
+  }
+  .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    @media (min-width: 992px) and (max-width: 1199px) {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .box {
+      background-color: #777;
+      text-align: center;
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+      h3 {
+        font: {
+          size: 35px;
+          weight: 800;
+        }
+        color: $white-color;
+        margin: 5px auto 10px;
+        padding: 10px;
+      }
+      .title-box {
+        display: block;
+        color: #444;
+        margin-bottom: 20px;
+        font: {
+          size: 18px;
+          weight: 700;
+          family: "Lato", serif;
+        }
+      }
+      .price {
+        background-color: #f0f5f7;
+        padding: 10px;
+        color: $main-color;
+        font: {
+          size: 30px;
+          weight: 800;
+        }
+        .period {
+          font: {
+            size: 13px;
+            weight: 800;
+            family: "Lato", serif;
+          }
+          color: $main-color;
+          position: relative;
+          left: -8px;
+        }
+      }
+      ul {
+        line-height: 2;
+        li {
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 5px;
+          color: $white-color;
+          font-weight: 600;
+        }
+      }
+      &.Corporate {
+        position: relative;
+        top: -20px;
+        @media (max-width: 991px) {
+          top: 0;
+        }
+        .price {
+          background-color: $secondary-color;
+          color: $white-color;
+          .period {
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* End Pricing Table Section */
+
+/* ============================================================================== */
+
+/* Start Our Statistics Section */
+
+.our-statistics {
+  @extend %padding-top-bottom-50;
+  h2 {
+    @extend %main-title;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    .box {
+      text-align: center;
+      i {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background-color: $red-color;
+        color: $white-color;
+      }
+      .number {
+        color: $main-color;
+        margin: 10px auto;
+        font : {
+          size: 50px;
+          weight: 700;
+        }
+      }
+      p {
+        color: #444;
+        margin: 10px auto 0;
+        font : {
+          size: 20px;
+          weight: 600;
+        }
+      }
+    }
+  }
+}
+
+/* End Our Statistics Section */
+
+/* ============================================================================== */
+
+/* Start Contact Us */
+
+.contact-us {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: $secondary-color;
+  .container {
+    @include space-between;
+    flex-wrap: wrap;
+    @media (max-width: 991px) {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  .info {
+    p {
+      color: $white-color;
+      font : {
+        size: 30px;
+        weight: 700;
+      }
+    }
+  }
+}
+
+/* End Contact Us */
+
+/* ============================================================================== */
+
+// Placeholder
+
+%padding-top-bottom-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+%main-title {
+  text-align: center;
+  color: $main-color;
+  font : {
+    size: 50px;
+    weight: 700;
+  }
+  @include breakpoints(mobile) {
+    font-size: 35px;
+  }
+  margin: {
+    top: 0;
+    bottom: 50px;
+  }
+}
+
+%description {
+  color: #777;
+  text-align: center;
+  line-height: 1.9;
+  font: {
+    size: 20px;
+    weight: 600;
+  }
+}
+
+/* ============================================================================== */

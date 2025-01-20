@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design With Sass</title>
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Normalize File -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Home Page Styles -->
+    <link rel="stylesheet" href="css/home-page.css" />
+    <!-- Animate Css File -->
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header>
+      <!-- Start Upper Bar Section -->
+      <div class="upper-bar">
+        <div class="container">
+          <div class="main-upper">
+            <div class="contact">
+              <i class="fa-solid fa-phone"></i>
+              <span> +9647503120748</span>
+              _
+              <i class="fa-regular fa-envelope"></i>
+              <span>Mhd.alsous.98@gmail.com</span>
+            </div>
+            <div class="message">
+              <span>Let's Work Together!</span>
+              <button class="get-started">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Upper Bar Section -->
+
+      <!-- Start NavBar Section -->
+      <nav>
+        <div class="container">
+          <div class="navbar">
+            <div class="brand">Elite<span>Corp</span></div>
+            <ul>
+              <li><a class="active" href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Work</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="toggler">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- End NavBar Section -->
+    </header>
+
+    <!-- End Header -->
+
+    <!-- ==============================================================================  -->
+
+    <!-- Start Landing Section -->
+
+    <section class="landing">
+      <div>We're An Independent Design And Development Agency.</div>
+    </section>
+
+    <!-- End Landing Section -->
+
+    <!-- ==============================================================================  -->
+
+    <!-- Start Features Section -->
+
+    <section class="features">
+      <div class="container">
+        <h2>Our Features</h2>
+        <div class="boxs">
+          <div
+            class="box wow animate__animated animate__backInLeft"
+            data-wow-duration="2s"
+            data-wow-offset="100"
+          >
+            <i class="fa-solid fa-heart fa-2x"></i>
+            <h3>Great Idea</h3>
+            <p>
+              Lorem ipsum dolor sit amet, sectetur adipisicing elit, eiusmod
+              tempor incididunalquis nostrud exercitation
+            </p>
+          </div>
+
+          <div
+            class="box wow animate__animated animate__backInUp"
+            data-wow-duration="2s"
+            data-wow-offset="100"
+          >
+            <i class="fa-solid fa-cogs fa-2x"></i>
+            <h3>Quick Settings</h3>
+            <p>
+              Lorem ipsum dolor sit amet, sectetur adipisicing elit, eiusmod
+              tempor incididunalquis nostrud exercitation
+            </p>
+          </div>
+
+          <div
+            class="box wow animate__animated animate__backInDown"
+            data-wow-duration="2s"
+            data-wow-offset="100"
+          >
+            <i class="fa-solid fa-cloud fa-2x"></i>
+            <h3>Cloud Services</h3>
+            <p>
+              Lorem ipsum dolor sit amet, sectetur adipisicing elit, eiusmod
+              tempor incididunalquis nostrud exercitation
+            </p>
+          </div>
+
+          <div
+            class="box wow animate__animated animate__backInRight"
+            data-wow-duration="2s"
+            data-wow-offset="100"
+          >
+            <i class="fa-solid fa-bookmark fa-2x"></i>
+            <h3>Cross Dev</h3>
+            <p>
+              Lorem ipsum dolor sit amet, sectetur adipisicing elit, eiusmod
+              tempor incididunalquis nostrud exercitation
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Features Section -->
+
+    <!-- ==============================================================================  -->
+
+    <!-- Start OverView Section -->
+
+    <section class="overview">
+      <div
+        class="container wow animate__animated animate__zoomIn"
+        data-wow-duration="2s"
+        data-wow-offset="200"
+      >
+        <h2>Company Overview</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <span>Lets Start Today</span>
+        <button class="show-more">View More</button>
+      </div>
+    </section>
+
+    <!-- End OverView Section -->
+
+    <!-- ==============================================================================  -->
+
+    <!-- Start Featured Work -->
+
+    <section class="work">
+      <div class="container">
+        <h2>Featured Work</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <ul>
+          <li class="active" data-work=".all">All</li>
+          <li data-work=".website">Website</li>
+          <li data-work=".logos">Logos</li>
+          <li data-work=".graphic">Graphic</li>
+          <li data-work=".marketing">Marketing</li>
+          <li data-work=".videos">Videos</li>
+        </ul>
+        <div class="images">
+          <img class="all logos" src="images/01.jpg" alt="" />
+          <img class="all graphic" src="images/02.jpg" alt="" />
+          <img class="all website" src="images/03.jpg" alt="" />
+          <img class="all videos" src="images/04.jpg" alt="" />
+          <img class="all marketing" src="images/05.jpg" alt="" />
+          <img class="all videos" src="images/06.jpg" alt="" />
+          <img class="all website" src="images/07.jpg" alt="" />
+          <img class="all logos" src="images/08.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- End Featured Work -->
+
+    <!-- ==============================================================================  -->
+
+    <!-- Start Latest Posts Section -->
+
+    <section class="latest-posts">
+      <div class="container">
+        <div
+          class="wow animate__animated animate__zoomIn"
+          data-wow-duration="2s"
+          data-wow-offset="200"
+        >
+          <h2>Latest Posts</h2>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="cards">
+          <div
+            class="card mobile-center wow animate__animated animate__fadeInLeftBig"
+            data-wow-duration="2s"
+            data-wow-offset="200"
+          >
+            <img src="images/post01.jpg" alt="post-01" />
+            <h3>Lorem Ipsum is simply dummy text ofthe printing and</h3>
+            <span>24 March 2025</span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <button class="read-more">Read More ...</button>
+          </div>
+
+          <div
+            class="card mobile-center wow animate__animated animate__fadeInUpBig"
+            data-wow-duration="2s"
+            data-wow-offset="200"
+          >
+            <img src="images/post02.jpg" alt="post-02" />
+            <h3>Lorem Ipsum is simply dummy text ofthe printing and</h3>
+            <span>01 January 2025</span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <button class="read-more">Read More ...</button>
+          </div>
+
+          <div
+            class="card mobile-center wow animate__animated animate__fadeInRightBig"
+            data-wow-duration="2s"
+            data-wow-offset="200"
+          >
+            <img src="images/post03.jpg" alt="post-03" />
+            <h3>Lorem Ipsum is simply dummy text ofthe printing and</h3>
+            <span>31 December 2024</span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <button class="read-more">Read More ...</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Latest Posts Section -->
+
+    <!-- ==============================================================================  -->
+
+    <!-- Start Pricing Table Section -->
+    <section class="pricing-table">
+      <div class="container">
+        <h2>Pricing Table</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <div class="boxs">
+          <div
+            class="box wow animate__animated animate__zoomIn"
+            data-wow-duration="2s"
+            data-wow-offset="200"
+            data-wow-delay="0s"
+          >
+            <h3>Small Business</h3>
+            <span class="title-box">Lorem Ipsum</span>
+            <div class="price">
+              $99/
+              <span class="period">Year</span>
+            </div>
+            <ul>
+              <li>30 Days</li>
+              <li>5 Users</li>
+              <li><strong>10 GB</strong> Disk Space</li>
+              <li><strong>5 Email</strong> Accounts</li>
+              <li>Email Support</li>
+              <li>Free Upgrades</li>
+            </ul>
+            <button class="subscribe">Subscribe</button>
+          </div>
+
+          <div
+            class="box Corporate wow animate__animated animate__zoomIn"
+            data-wow-duration="2s"
+            data-wow-offset="200"
+            data-wow-delay="0.5s"
+          >
+            <h3>Corporate</h3>
+            <span class="title-box">Lorem Ipsum</span>
+            <div class="price">
+              $199/
+              <span class="period">Year</span>
+            </div>
+            <ul>
+              <li>60 Days</li>
+              <li>10 Users</li>
+              <li><strong>20 GB</strong> Disk Space</li>
+              <li><strong>10 Email</strong> Accounts</li>
+              <li>Email Support</li>
+              <li>Free Upgrades</li>
+            </ul>
+            <button class="subscribe">Subscribe</button>
+          </div>
+
+          <div
+            class="box wow animate__animated animate__zoomIn"
+            data-wow-duration="2s"
+            data-wow-offset="200"
+            data-wow-delay="1s"
+          >
+            <h3>Enterprise</h3>
+            <span class="title-box">Lorem Ipsum</span>
+            <div class="price">
+              $299/
+              <span class="period">Year</span>
+            </div>
+            <ul>
+              <li>90 Days</li>
+              <li><strong>Unlimited</strong> Users</li>
+              <li><strong>50 GB</strong> Disk Space</li>
+              <li><strong>20 Email</strong> Accounts</li>
+              <li>Email Support</li>
+              <li>Free Upgrades</li>
+            </ul>
+            <button class="subscribe">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Pricing Table Section -->
+
+    <!-- ==============================================================================  -->
+
+    <!-- Start Our Statistics Section -->
+
+    <section class="our-statistics">
+      <div class="container">
+        <h2>Our Statistics</h2>
+        <div class="stats">
+          <div class="box">
+            <i class="fa fa-user fa-2x"></i>
+            <div class="number" data-number="1625">0</div>
+            <p>Happy Clients</p>
+          </div>
+
+          <div class="box">
+            <i class="fa fa-heart fa-2x"></i>
+            <div class="number" data-number="1320">0</div>
+            <p>Amazing Tours</p>
+          </div>
+
+          <div class="box">
+            <i class="fa fa-briefcase fa-2x"></i>
+            <div class="number" data-number="1750">0</div>
+            <p>Partners</p>
+          </div>
+
+          <div class="box">
+            <i class="fa fa-comments fa-2x"></i>
+            <div class="number" data-number="1400">0</div>
+            <p>Questions Answered</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Our Statistics Section -->
+
+    <!-- ==============================================================================  -->
+
+    <!-- Start Contact Us -->
+
+    <section class="contact-us">
+      <div class="container">
+        <div class="info">
+          <p>You think we're cool.. ? let's work together</p>
+        </div>
+        <div class="contact-button">
+          <button class="contact">Contact Us</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Contact Us -->
+
+    <!-- ==============================================================================  -->
+
+    <!-- Start Footer -->
+    <footer>
+      <div class="container">
+        <div class="groups">
+          <div
+            class="group wow animate__animated animate__zoomIn"
+            data-wow-duration="2s"
+            data-wow-offset="200"
+            data-wow-delay="0s"
+          >
+            <div class="logo">Elite<span>Corp</span></div>
+            <div class="info">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+            <a href="#">Read More</a>
+          </div>
+
+          <div
+            class="group wow animate__animated animate__zoomIn"
+            data-wow-duration="2s"
+            data-wow-offset="200"
+            data-wow-delay="0.5s"
+          >
+            <h4>Helpful Links</h4>
+            <div class="links">
+              <ul>
+                <li>About</li>
+                <li>Portofolio</li>
+                <li>Team</li>
+                <li>Price</li>
+                <li>Privacy</li>
+              </ul>
+
+              <ul>
+                <li>FAQ</li>
+                <li>Blog</li>
+                <li>How it Work</li>
+                <li>Benefits</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="group wow animate__animated animate__zoomIn"
+            data-wow-duration="2s"
+            data-wow-offset="200"
+            data-wow-delay="1s"
+          >
+            <h4>Contact Us</h4>
+            <address>Iraq - Erbil - Hewa City</address>
+            <div class="phone">Phone : +9647503120748</div>
+            <div class="mail">Email : mhd.alsous.98@gmail.com</div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <div class="copy">
+            Created By <span>Muhammed AL-Sous</span> -2025&copy;
+          </div>
+          <div class="social-media">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- ==============================================================================  -->
+    <!-- Wow JavaScript Library -->
+    <script src="javascript/wow.min.js"></script>
+    <!-- Main JavaScript File -->
+    <script src="javascript/script.js"></script>
+  </body>
+</html>

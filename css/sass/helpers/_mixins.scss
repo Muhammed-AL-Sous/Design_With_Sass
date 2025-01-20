@@ -1,0 +1,94 @@
+// Media Query
+
+@mixin breakpoints($point) {
+  @if $point == "mobile" {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == "small" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == "medium" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point == "large" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+// =================================================================== //
+
+// Overlay Layers
+
+@mixin overlay($color, $opacity, $z-index) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color, $opacity);
+  z-index: $z-index;
+}
+
+// =================================================================== //
+
+// Prefixes Mixin
+
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" + $property}: $value;
+  }
+
+  #{$property}: $value;
+}
+
+// Example
+
+// .class {
+//   @include prefixer(box-shadow, 10px 10px 5px #ccc, webkit moz ms o);
+// }
+
+// =================================================================== //
+
+// Animation Mixin
+// Auto Add Prefixes To Animation
+
+@mixin keyF($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+// =================================================================== //
+
+// Transition Mixins
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// Example
+// .class {
+//   @include transition(opacity 0.5s linear);
+// }
+
+// =================================================================== //
+
+// Flex Mixins
+
+@mixin space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

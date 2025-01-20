@@ -1,0 +1,47 @@
+// Import Mixin File
+@use "../helpers/mixins" as *;
+
+// Import Variables File
+@use "../helpers/variables" as *;
+
+/* Start Grid System */
+
+* {
+  @include prefixer(box-sizing, border-box, webkit);
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  // Small Devices
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  // Medium Devices => Tablets
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  // Large Devices
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  // X-Large Devices
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  // XX-Large Devices
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+}
+
+/* End Grid System */
+
+/* ============================================================================== */
